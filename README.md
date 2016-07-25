@@ -27,9 +27,8 @@ print(response.text)
 **Response extracted data in json:**
 ```json
 {
-    "text": [],
-    "tags": [],
-    "emoji": []
-}
+    "text": ["fdsjdhfs","sgfdsf","edasda","asdad","дед","мороз","прирос"],
+    "tags":["fsdfsdf","прирос"],
+    "emoji":["😍","😍","😍","😍","😍","😍"]}
 ```
 
