@@ -15,20 +15,25 @@ go build main.go
 ```
 ## How use (examples on Python)
 ```python
+#!/usr/bin/python3
+
 import requests
 
-response = requests.post('http://127.0.0.1:10101/text', json={
-    "text": "fdsjdhfs sgfdsf ii sdf Edasda asdad 😍😍😍😍😍😍 Жил был Дед-медвед #fsdfsdf #которыйговорилпревед"
-})
+data = {
+    "text": 'Lorem ipsum dolor sit. Рыба живет в пруду, нам поймать бы хоть одну. #hashtag #hashtag2 ⌛'
+}
 
-print(response.text)
+response = requests.post('http://127.0.0.1:10101/text', json=data)
+data = response.json()
+print(data)
 ```
 
 **Response extracted data in json:**
-```json
+```python
 {
-    "text": ["fdsjdhfs","sgfdsf","edasda","asdad","дед","мороз","прирос"],
-    "tags":["fsdfsdf","прирос"],
-    "emoji":["😍","😍","😍","😍","😍","😍"]}
+    'emoji': ['⌛'], 
+    'text': ['lorem', 'ipsum', 'dolor'], 
+    'tags': ['hashtag', 'hashtag2']
+}
 ```
 
