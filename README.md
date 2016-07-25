@@ -29,7 +29,7 @@ print(response.text)
 {
     "text": [],
     "tags": [],
-    "emoji: []
+    "emoji": []
 }
 ```
 
