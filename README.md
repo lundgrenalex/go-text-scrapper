@@ -23,3 +23,13 @@ response = requests.post('http://127.0.0.1:10101/text', json={
 
 print(response.text)
 ```
+
+**Response extracted data in json:**
+```json
+{
+    'text': [],
+    'tags': [],
+    'emoji': []
+}
+```
+
